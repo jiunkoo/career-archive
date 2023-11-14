@@ -1,0 +1,20 @@
+$font-en: 'TimesNewRoman';
+// $font-kr: 'BookkMyungjo-Bd';
+$font-kr: 'Noto Serif KR', serif;
+// $font-code-block: 'Consolas';
+
+@font-face {
+    font-family: 'TimesNewRoman';
+    src: url('https://fonts.cdnfonts.com/css/times-new-roman') format("otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BookkMyungjo-Bd';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkMyungjo-Bd.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&family=Noto+Serif:wght@100;200;300;400;500&display=swap');

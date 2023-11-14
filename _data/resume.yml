@@ -1,0 +1,97 @@
+title: 이력서
+
+contact:
+  subtitle: 인적사항
+  info:
+    - label: 이름
+      value: 구지운
+    - label: 전화번호
+      value: 010 0000 0000
+    - label: 이메일
+      value: jiunkoo0106@gmail.com
+    - label: 깃허브
+      value: https://github.com/jiunkoo
+    - label: 블로그
+      value: https://jiunkoo.github.io
+
+career:
+  subtitle: 경력
+  info:
+    - heading: Erpper Korea(정규직)
+      period: 2020.05. ~ 2022.05.
+      info:
+        - heading: AI 재무관리 플랫폼 AICY 개발
+          period: 2022.01. ~ 2022.05.
+          info:
+            - heading: 백엔드
+              info:
+                - 사용자가 등록한 계정별 원장 액셀 파일의 파싱 로직 개발
+                - 액셀 파일의 데이터 유효성을 검증하는 데이터 검증 로직 개발
+                - 회계 리포트 서비스의 백엔드 스키마 개발
+            - heading: 사용한 기술
+              info: Node.js, PostgreSQL, graphQL
+        - heading: 클라우드 회계 서비스 Erpper ERP 개발
+          period: 2022.05. ~ 2022.12.
+          info:
+            - heading: 프론트엔드
+              info:
+                - 프론트엔드 리팩토링 작업 참여
+                - 외환 평가, 홈택스 자료 조회, 감가상각 화면 개발
+                - 기존 코드에 Hooks를 도입해서 상태 관리 개선
+            - heading: 백엔드
+              info:
+                - 외환 평가, 홈택스 자료 조회 스키마 개발 및 감가상각 로직 보완 등 기능 개발
+                - 환율 계산 방식을 통일해서 환율 오류 개선
+                - 국제화 작업에 참여해서 기존의 연산 대비 소수점 연산 정확도 개선
+                - DB 리팩토링 작업에 주도적으로 참여해서 700개 이상의 테스트 코드를 작성, DB 안정성 증가
+            - heading: 사용한 기술
+              info: React, Node.js, rethinkDB, graphQL
+
+other:
+  subtitle: 기타 활동
+  info:
+    - heading: F-Lab 자바 백엔드 멘토링
+      period: 2023.08. ~ 진행 중
+      info:
+        - 웹 이커머스 서비스 Gregori 프로젝트 백엔드 개발
+        - 자바 및 객체지향의 원리 학습
+    - heading: 백엔드 학습
+      period: 2023.05. ~ 2023.07.
+      info:
+        - 자바의 정석, HTTP 완벽 가이드 학습 및 깃헙 블로그 정리
+    - heading: AI 부트캠프 이어드림스쿨 참가
+      period: 2023.03. ~ 2023.06.
+      info:
+        - 컴퓨터 공학 복습
+        - 데이터 분석 학습 및 EDA 미니 프로젝트 수행
+    - heading: 여성향 비주얼노벨 게임 The Winter Tower 개발&스팀 출시
+      period: 2021.12. ~ 2022.12.
+      info:
+        - 프로젝트 기획 및 시나리오 집필
+        - UI 설계 및 전체 프로그래밍 총괄
+
+skill:
+  subtitle: 기술
+  info:
+    - heading: Java
+      info:
+        - Spring Framework 사용 경험
+    - heading: JavaScript
+      info:
+        - Node.js 서버 백엔드 개발
+        - 700개 이상의 DB 테스트를 구현 및 적용하는 등 서버 안정성 개선 경험
+    - heading: AI 부트캠프 이어드림스쿨 참가
+      info:
+        - Python으로 구현된 RenPy 엔진 기반 게임 개발 및 스팀 출시 경험
+
+credential:
+  subtitle: 자격증
+  info:
+    - period: 2019.08.
+      value: 정보처리기사 취득
+
+education:
+  subtitle: 학력
+  info:
+    - period: 2013.02. ~ 2019.02.
+      value: 울산대학교 IT융합 학사 졸업

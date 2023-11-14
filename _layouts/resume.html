@@ -1,0 +1,163 @@
+---
+---
+{% assign resume = site.data.resume %}
+{% include head.html %}
+
+<!doctype html>
+<html>
+
+<head>
+  <meta http-equiv=Content-Type content="text/html; charset=utf-8">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="child resume-title">
+      <table>
+        <tbody>
+          <tr>
+            <td>{{ resume.title }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <div class="child resume-content">
+      <table>
+        <tbody>
+          <tr>
+            <td colspan="2" class="subtitle">{{ resume.contact.subtitle }}</td>
+          </tr>
+          {% for info in resume.contact.info %}
+            <tr>
+              <td class="label">{{ info.label }}</td>
+              <td>{{ info.value }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="child resume-career">
+      <table>
+        <tbody>
+          <tr>
+            <td colspan="5" class="subtitle">{{ resume.career.subtitle }}</td>
+          </tr>
+          {% for info1 in resume.career.info %}
+            <tr>
+              <td>&nbsp;&nbsp;&nbsp;</td>
+              <td colspan="4" class="heading1">{{ info1.heading }}&nbsp;&nbsp;{{ info1.period }}</td>
+            </tr>
+            {% for info2 in info1.info %}
+              <tr>
+                <td>&nbsp;&nbsp;&nbsp;</td>
+                <td>&nbsp;&nbsp;&nbsp;</td>
+                <td colspan="3" class="heading2">{{ info2.heading }}&nbsp;&nbsp;{{ info2.period }}</td>
+              </tr>
+              {% for info3 in info2.info %}
+                <tr>
+                  <td>&nbsp;&nbsp;&nbsp;</td>
+                  <td>&nbsp;&nbsp;&nbsp;</td>
+                  <td>&nbsp;&nbsp;&nbsp;</td>
+                  <td colspan="2" class="heading3">{{ info3.heading }}</td>
+                </tr>
+                {% for info4 in info3.info %}
+                  <tr>
+                    <td>&nbsp;&nbsp;&nbsp;</td>
+                    <td>&nbsp;&nbsp;&nbsp;</td>
+                    <td>&nbsp;&nbsp;&nbsp;</td>
+                    <td>&nbsp;&nbsp;&nbsp;</td>
+                    <td> - {{ info4 }}</td>
+                  </tr>
+                {% endfor %}
+              {% endfor %}
+            {% endfor %}
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="child resume-other">
+      <table>
+        <tbody>
+          <tr>
+            <td colspan="3" class="subtitle">{{ resume.other.subtitle }}</td>
+          </tr>
+          {% for info1 in resume.other.info %}
+            <tr>              
+              <td>&nbsp;&nbsp;&nbsp;</td>
+              <td colspan="2" class="heading3">{{ info1.heading }}&nbsp;&nbsp;{{ info1.period }}</td>
+            </tr>
+            {% for info2 in info1.info %}
+              <tr>
+                <td>&nbsp;&nbsp;&nbsp;</td>
+                <td>&nbsp;&nbsp;&nbsp;</td>
+                <td> - {{ info2 }}</td>
+              </tr>
+            {% endfor %}
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="child resume-skill">
+      <table>
+        <tbody>
+          <tr>
+            <td colspan="3" class="subtitle">{{ resume.skill.subtitle }}</td>
+          </tr>
+          {% for info1 in resume.skill.info %}
+            <tr>              
+              <td>&nbsp;&nbsp;&nbsp;</td>
+              <td colspan="2" class="heading3">{{ info1.heading }}</td>
+            </tr>
+            {% for info2 in info1.info %}
+              <tr>
+                <td>&nbsp;&nbsp;&nbsp;</td>
+                <td>&nbsp;&nbsp;&nbsp;</td>
+                <td> - {{ info2 }}</td>
+              </tr>
+            {% endfor %}
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="child resume-credential">
+      <table>
+        <tbody>
+          <tr>
+            <td colspan="2" class="subtitle">{{ resume.credential.subtitle }}</td>
+          </tr>
+          {% for info in resume.credential.info %}
+            <tr>
+              <td class="period">{{ info.period }}</td>
+              <td>{{ info.value }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="child resume-education">
+      <table>
+        <tbody>
+          <tr>
+            <td colspan="2" class="subtitle">{{ resume.education.subtitle }}</td>
+          </tr>
+          {% for info in resume.education.info %}
+            <tr>
+              <td class="period">{{ info.period }}</td>
+              <td>{{ info.value }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    </div>
+  </div>
+</body>
+</html>
