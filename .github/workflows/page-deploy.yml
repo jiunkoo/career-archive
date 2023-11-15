@@ -1,12 +1,11 @@
 name: "Build and Deploy"
-
 on:
   push:
     branches: ["main"]
-  paths-ignore:
-    - .gitignore
-    - README.md
-    - LICENSE
+    paths-ignore:
+      - .gitignore
+      - README.md
+      - LICENSE
 
   workflow_dispatch:
 
@@ -37,7 +36,6 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3
-          bundler-cache: true
 
       - name: Build site
         run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
