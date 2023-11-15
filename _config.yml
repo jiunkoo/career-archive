@@ -2,7 +2,7 @@
 
 # theme: minima
 # theme: career-archive
-baseurl: ""
+baseurl: "/career-archive"
 url: "https://jiunkoo.github.io"
 
 title: Koubit's Career Archive
