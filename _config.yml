@@ -2,8 +2,8 @@
 
 # theme: minima
 # theme: career-archive
-baseurl: "/career-archive"
 url: "https://jiunkoo.github.io"
+baseurl: ""
 
 title: Koubit's Career Archive
 description: >-
@@ -23,3 +23,6 @@ data_path: data
 sass:
   sass_dir: _sass
   style: compressed
+
+css:
+  /career
