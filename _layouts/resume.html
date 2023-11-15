@@ -8,7 +8,11 @@
 
 <head>
   <meta http-equiv=Content-Type content="text/html; charset=utf-8">
-  <link rel="stylesheet" href="/career-archive/assets/css/main.css">
+  {% assign resume_url = '/assets/css/main.css' %}
+  {% if jekyll.environment == 'production' %}
+    {% assign resume_url = '/career-archive/assets/css/main.css' %}
+  {% endif %}
+  <link rel="stylesheet" href="{{ resume_url }}">
 </head>
 
 <body>
