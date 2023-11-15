@@ -1,7 +1,7 @@
 ---
 layout: resume
 title: resume
-permalink: '/resume/'
+permalink: 'jiunkoo-career-archive/resume/'
 ---
 
 Resume permalink page.
