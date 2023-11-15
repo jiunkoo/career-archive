@@ -7,13 +7,17 @@ layout: default
     <h1>Home.html</h1>
   <body>
     <ul>
-      {% assign url = site.url %}
+      {% assign resume_url = 'resume/' %}
+      {% assign cover-letter_url = 'cover-letter/' %}
+      {% assign portfolio_url = 'portfolio/' %}
       {% if jekyll.environment == 'production' %}
-        {% assign url = site.url | append: 'career-archive' %}
+        {% assign resume_url = 'career-archive/resume/' %}
+        {% assign cover-letter_url = 'career-archive/cover-letter/' %}
+        {% assign portfolio_url = 'career-archive/portfolio/' %}
       {% endif %}
-      <li><a href="{{ url }}/resume/">resume</a></li>
-      <li><a href="{{ url }}/cover-letter/">cover letter</a></li>
-      <li><a href="{{ url }}/portfolio/">portfolio</a></li>
+      <li><a href="{{ site.url }}/{{ resume_url }}">resume</a></li>
+      <li><a href="{{ site.url }}/{{ cover-letter_url }}">cover letter</a></li>
+      <li><a href="{{ site.url }}/{{ portfolio_url }}">portfolio</a></li>
     </ul>
   </body>
 </html>
