@@ -10,7 +10,11 @@
           {% for item in paths %}
             {% if forloop.first %}
               <span>
-                <a href="{{ '/career-archive/' | relative_url }}">Home</a>
+                {% assign url = '/' | relative_url %}
+                {% if jekyll.environment == 'production' %}
+                  {% assign url = '/career-archive/' | relative_url %}
+                {% endif %}
+                <a href="{{ url }}">Home</a>
               </span>
             {% else %}
               <span>{{ page.title | capitalize }}</span>
