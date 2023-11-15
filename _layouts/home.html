@@ -9,7 +9,7 @@ layout: default
     <ul>
       {% assign url = site.url %}
       {% if jekyll.environment == 'production' %}
-        {% assign url = url | append: 'career-archive' %}
+        {% assign url = site.url | append: 'career-archive' %}
       {% endif %}
       <li><a href="{{ url }}/resume/">resume</a></li>
       <li><a href="{{ url }}/cover-letter/">cover letter</a></li>
