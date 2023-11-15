@@ -1,7 +1,7 @@
 ---
 layout: portfolio
 title: portfolio
-permalink: '/jiunkoo-career-archive/portfolio/'
+permalink: '/portfolio/'
 ---
 
 Portfolio permalink page.
