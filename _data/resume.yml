@@ -5,8 +5,6 @@ contact:
   info:
     - label: 이름
       value: 구지운
-    - label: 전화번호
-      value: 010 0000 0000
     - label: 이메일
       value: jiunkoo0106@gmail.com
     - label: 깃허브
