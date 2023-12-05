@@ -1,0 +1,84 @@
+@import "variables";
+
+body {
+    font-size: 0.85em;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+}
+
+.sidebar {
+    background-color: $linen-color;
+}
+
+.main {
+    background-color: white;
+    font-family: $font-kr;
+    width: 21cm;
+    min-height: 29.7cm;
+}
+
+.child {
+    margin-bottom: 0.4cm;
+    padding: 0.4cm;
+    // break-inside: auto;
+    // border: 1px solid;
+}
+
+.content-container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    padding-top: 0.2cm;
+
+    .label {
+        padding-left: 0.4cm;
+        font-weight: 700;
+    }
+}
+
+.document-title {
+    padding-top: 0.8cm;
+    font-size: 3.5em;
+    font-weight: 900;
+}
+
+.document-subtitle {
+    padding-bottom: 0.2cm;
+    border-bottom: 1px solid;
+    font-size: 2em;
+    font-weight: 800;
+
+    span {
+        font-size: 0.875em;
+    }
+}
+
+.document-heading1 {
+    padding: 0.2cm 0.0cm 0.2cm 0.4cm;
+    font-weight: 700;
+    font-size: 1.4em;
+}
+
+.document-heading2 {
+    padding: 0.2cm 0.0cm 0.2cm 0.8cm;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.document-heading3 {
+    padding: 0.2cm 0.0cm 0.2cm 1.2cm;
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+.document-heading4 {
+    padding: 0.2cm 0.0cm 0.2cm 1.6cm;
+    font-weight: 400;
+    font-size: 1em;
+}
+
+.document-info {
+    padding: 0.1cm 0.0cm 0.1cm 0.0cm;
+}

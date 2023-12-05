@@ -1,0 +1,57 @@
+.portfolio-child {
+    padding: 0.2cm 0.4cm 0.2cm 0.4cm;
+    margin-bottom: 0.4cm;
+    // border: 1px solid;
+}
+
+.portfolio-link {
+    .document-heading1 {
+        padding: 0.0cm 0.0cm 0.2cm 0.4cm;
+    }
+
+    .content-container {
+        padding: none;
+        .label {
+            padding-left: 0.8cm;
+        }
+    }
+}
+
+.portfolio-description {
+    .document-heading1 {
+        padding: 0.0cm 0.0cm 0.2cm 0.4cm;
+    }
+
+    .info {
+        padding-left: 0.8cm;
+    }
+}
+
+.portfolio-skill {
+    .document-heading1 {
+        padding: 0.0cm 0.0cm 0.2cm 0.4cm;
+    }
+
+    .info {
+        padding-left: 0.8cm;
+    }
+}
+
+.portfolio-achivement {
+    .document-heading1 {
+        padding: 0.0cm 0.0cm 0.2cm 0.4cm;
+    }
+
+    .document-heading2 {
+        padding: 0.0cm 0.0cm 0.2cm 0.8cm;
+    }
+
+    .document-heading3 {
+        padding: 0.0cm 0.0cm 0.2cm 1.2cm;
+    }
+
+    .info {
+        padding-left: 1.6cm;
+        padding-bottom: 0.2cm;
+    }
+}

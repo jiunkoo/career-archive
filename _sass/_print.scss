@@ -1,6 +1,8 @@
 @media print {
     @page {
-        size: auto;
+        size: A4;
+        width: 21cm;
+        min-height: 29.7cm;
         margin: 1.5cm 2.0cm 1.5cm 2.0cm;
     }
 

@@ -4,7 +4,6 @@
 
 <!doctype html>
 <html>
-
   <head>
     <meta http-equiv=Content-Type content="text/html; charset=utf-8">
     {% assign resume_url = '/assets/css/main.css' %}
@@ -18,13 +17,13 @@
     {% include header.html %}
     <div class="container">
       <div class="sidebar"></div>
-      <div class="main" id="resume">
-        <div class="child resume-title">
+      <div class="main">
+        <div class="child document-title">
           {{ resume.title }}
         </div>
       
         <div class="child resume-content">
-          <div class="resume-subtitle">
+          <div class="document-subtitle">
             {{ resume.contact.subtitle }}
           </div>
           {% for info in resume.contact.info %}
@@ -38,33 +37,33 @@
         </div>
     
         <div class="child resume-career">
-          <div class="resume-subtitle">
+          <div class="document-subtitle">
             {{ resume.career.subtitle }}
           </div>
           {% for info1 in resume.career.info %}
-            <div class="resume-heading1">
+            <div class="document-heading1">
               {{ info1.heading }}&nbsp;&nbsp;{{ info1.period }}
             </div>
             {% assign count = 0 %}
             {% for info2 in info1.info %}
               {% assign count = count | plus: 1 %}
-              <div class="resume-heading2">
+              <div class="document-heading2">
                 {{ info2.heading }}&nbsp;&nbsp;{{ info2.period }}
               </div>
               {% assign count2 = 0 %}
               {% for info3 in info2.info %}
                 {% assign count2 = count2 | plus: 1 %}
-                <div class="resume-heading3">
+                <div class="document-heading3">
                   {{ info3.heading }}
                 </div>
                 {% assign count3 = 0 %}
                 {% for info4 in info3.info %}
                   {% assign count3 = count3 | plus: 1 %}
-                  <div class="resume-heading4">
+                  <div class="document-heading4">
                     {{ info4.heading }}
                   </div>
                   {% for info5 in info4.info %}
-                      <div class="resume-info">
+                      <div class="document-info">
                         {{ info5 }}
                       </div>
                   {% endfor %}
@@ -84,17 +83,17 @@
         </div>
     
         <div class="child resume-other">
-          <div class="resume-subtitle">
+          <div class="document-subtitle">
             {{ resume.other.subtitle }}
           </div>
           {% assign count = 0 %}
           {% for info1 in resume.other.info %}
             {% assign count = count | plus: 1 %}
-            <div class="resume-heading2">
+            <div class="document-heading2">
               {{ info1.heading }}&nbsp;&nbsp;{{ info1.period }}
             </div>
             {% for info2 in info1.info %}
-              <div class="resume-info">
+              <div class="document-info">
                 - {{ info2 }}
               </div>
             {% endfor %}
@@ -105,17 +104,17 @@
         </div>
     
         <div class="child resume-skill">
-          <div class="resume-subtitle">
+          <div class="document-subtitle">
             {{ resume.skill.subtitle }}
           </div>
           {% assign count = 0 %}
           {% for info1 in resume.skill.info %}
             {% assign count = count | plus: 1 %}
-            <div class="resume-heading2">
+            <div class="document-heading2">
               {{ info1.heading }}
             </div>
             {% for info2 in info1.info %}
-              <div class="resume-info">
+              <div class="document-info">
                 - {{ info2 }}            
               </div>
             {% endfor %}
@@ -126,7 +125,7 @@
         </div>
     
         <div class="child">
-          <div class="resume-subtitle">
+          <div class="document-subtitle">
             {{ resume.credential.subtitle }}
           </div>
           {% for info in resume.credential.info %}
@@ -140,7 +139,7 @@
         </div>
     
         <div class="child">
-          <div class="resume-subtitle">
+          <div class="document-subtitle">
             {{ resume.education.subtitle }}
           </div>
           {% for info in resume.education.info %}
@@ -148,7 +147,7 @@
               <div class="label">
                 {{ info.label }}
               </div>
-              {{ info.value }}  
+              {{ info.value }}
             </div> 
           {% endfor %}
         </div>

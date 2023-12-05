@@ -1,105 +1,25 @@
-@import "variables";
-
-body {
-    font-size: 0.85em;
-}
-
-.container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-.sidebar {
-    background-color: $smoky-white;
-}
-
-.main {
-    background-color: white;
-    font-family: $font-kr;
-    width: 21cm;
-    min-height: 29.7cm;
-}
-
-.child {
-    margin-bottom: 0.4cm;
-    padding: 0.4cm;
-    // break-inside: auto;
-    // border: 1px solid;
-}
-
-.resume-title {
-    font-size: 3.5em;
-    font-weight: 900;
-}
-
-.resume-subtitle {
-    padding-bottom: 0.2cm;
-    border-bottom: 1px solid;
-    font-size: 2em;
-    font-weight: 800;
-}
-
-.resume-heading1 {
-    padding: 0.2cm 0.0cm 0.2cm 0.4cm;
-    font-weight: 700;
-    font-size: 1.4em;
-}
-
-.resume-heading2 {
-    padding: 0.2cm 0.0cm 0.2cm 0.8cm;
-    font-weight: 600;
-    font-size: 1.2em;
-}
-
-.resume-heading3 {
-    padding: 0.2cm 0.0cm 0.2cm 1.2cm;
-    font-weight: 500;
-    font-size: 1.1em;
-}
-
-.resume-heading4 {
-    padding: 0.2cm 0.0cm 0.2cm 1.6cm;
-    font-weight: 400;
-    font-size: 1em;
-}
-
-.resume-info {
-    padding: 0.1cm 0.0cm 0.1cm 0.0cm;
-}
-
-.content-container {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    padding-top: 0.2cm;
-
-    .label {
-        padding-left: 0.4cm;
-        font-weight: 700;
-    }
-}
-
 .resume-career {
-    .resume-info {
+    .document-info {
         padding-left: 2.0cm;
     }
 }
 
 .resume-other {
-    .resume-heading2 {
+    .document-heading2 {
         padding-left: 0.4cm;
     }
 
-    .resume-info {
+    .document-info {
         padding-left: 0.8cm;
     }
 }
 
 .resume-skill {
-    .resume-heading2 {
+    .document-heading2 {
         padding-left: 0.4cm;
     }
 
-    .resume-info {
+    .document-info {
         padding-left: 0.8cm;
     }
 }

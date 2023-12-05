@@ -1,14 +1,14 @@
 .header-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    background-color: $smoky-white;
+    grid-template-columns: 1fr auto 1fr;
 }
 
 .header-sidebar {
-    background-color: $smoky-white;
+    background-color: $linen-color;
 }
 
 .header-main {
+    background-color: $linen-color;
     font-family: $font-kr;
     width: 21cm;
 }
@@ -20,15 +20,14 @@
 }
 
 .header-child {
-    padding: 0.4cm;
-    border-bottom: 5px solid;
-    place-items: center;
-    background-color: white;
-    font-size: 1.4em;
+    padding: 0.6cm;
+    // border-bottom: 5px solid;
+    background-color: $linen-color;
+    font-size: 1.6em;
     font-weight: 700;
 
     a {
-        color: $bold-color;
+        color: $bistre-color;
         text-decoration: none;
     }
 }

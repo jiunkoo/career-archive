@@ -1,0 +1,102 @@
+title: 포트폴리오
+
+size: 2
+
+project:
+  - subtitle: 이커머스 서비스 Gregori 프로젝트 개발
+    period: 2023.10. ~ 진행 중
+
+    link:
+      heading: 관련 링크
+      info:
+        - label: Github
+          value: https://github.com/f-lab-edu/gregori
+  
+    description:
+      heading: 소개
+      info:
+        - Gregori는 인형 옷을 전문으로 판매하는 이커머스 서비스입니다.
+        - 실제 이커머스 서비스에서 발생하는 문제를 재현하고 해결하는 게 목표입니다.
+        - 이커머스 서비스의 대용량 트래픽을 처리할 수 있는 서버를 구현할 예정입니다.
+  
+    skill:
+      heading: 사용 기술
+      info: Java, Spring, MySQL, GitHub Actions
+    
+    achivement:
+      heading: 문제와 해결
+      size: 2
+      info:
+        - heading: 1. CI/CD 자동화 세팅
+          problem:
+            heading: 문제
+            info: 향후 프로젝트의 생산성 증가와 빠른 배포를 위해 자동화 세팅에 대한 고민
+          solving:
+            heading: 해결
+            info:
+              - 기술 스택 결정 과정을 거쳐 GitHub Actions 선정
+              - GitHub Actions으로 빌드-배포 파이프라인 구축 
+              - Pull Request가 새로 작성될 때마다 빌드 테스트
+              - Pull Request가 메인 브랜치에 Merge 되면 배포
+
+        - heading: 2. 서비스 기술 스택 결정
+          problem:
+            heading: 문제
+            info: 프로젝트 설계 단계에서 서비스에 걸맞는 기술 스택을 어떻게 결정할지에 대한 고민
+          solving:
+            heading: 해결
+            info:
+              - 시장 점유율을 고려해서 후보군을 선정
+              - Gregori 서비스의 요구 조건을 기준으로 후보 서버를 평가하고 최종적으로 서비스 결정
+  
+  - subtitle: The Winter Tower 개발&스팀 출시
+    period: 2021.12. ~ 2022.12.
+
+    link:
+      heading: 관련 링크
+      info:
+        - label: Steam
+          value: https://store.steampowered.com/app/2199230/The_Winter_Tower/
+
+    description:
+      heading: 소개
+      info:
+        - The Winter Tower는 여성향 비주얼노벨 게임입니다. 
+        - Python 기반의 RenPy 엔진으로 개발되었으며 본편은 무료, 외전 및 아트는 DLC로 판매하였습니다.
+
+    skill:
+      heading: 사용 기술
+      info: Python
+
+    achivement:
+      heading: 문제와 해결
+      size: 3
+      info:
+        - heading: 1. 아트, UI, 번역, 성우 녹음 외주 커뮤니케이션
+          problem:
+            heading: 문제
+            info: 외주를 진행하는 과정에서 커뮤니케이션 문제 발생
+          solving:
+            heading: 해결
+            info:
+              - 배경아트 및 게임 내 CG는 참고 삽화 및 그림을 그려서 설명 문서 작성 후 링크 전달
+              - UI는 figma로 게임 UI 세팅 후 링크 전달
+              - 번역 및 성우 녹음은 샘플 요청하고 샘플에 따라 외주 업체 재선정 후 진행
+
+        - heading: 2. 개발 일정 지연
+          problem:
+            heading: 문제
+            info: 외주 결과물이 늦어짐에 따라 개발 일정도 지연됨
+          solving:
+            heading: 해결
+            info:
+              - 프로젝트는 기존의 개발 일정에 따라 임시 리소스로 개발 완료
+              - 외주 결과물이 돌아오는 대로 임시 리소스 -> 외주 리소스로 변경
+
+        - heading: 3. 유료 DLC 배포
+          problem:
+            heading: 문제
+            info: 본편에 삽입되는 외전이라 배포 패키지와 DLC를 따로 분리하기가 힘든 상황이었음
+          solving:
+            heading: 해결
+            info: 패키지 용량이 크지 않아 본편과 본편+DLC 두 개로 나누어 상점에 배포

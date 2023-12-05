@@ -1,10 +1,122 @@
 ---
 ---
-{% include header.html %}
+{% assign portfolio = site.data.portfolio %}
 
 <!doctype html>
 <html>
-    <h1>Portfolio.html</h1>
+  <head>
+    <meta http-equiv=Content-Type content="text/html; charset=utf-8">
+    {% assign portfolio_url = '/assets/css/main.css' %}
+    {% if jekyll.environment == 'production' %}
+      {% assign portfolio_url = '/career-archive/assets/css/main.css' %}
+    {% endif %}
+    <link rel="stylesheet" href="{{ portfolio_url }}">
+  </head>
+
   <body>
+    {% include header.html %}
+    <div class="container">
+      <div class="sidebar"></div>
+      <div class="main">
+        <div class="child document-title">
+          {{ portfolio.title }}
+        </div>
+
+        {% assign count = 0 %}
+        {% for project in portfolio.project %}
+          {% assign count = count | plus: 1 %}
+          <div class="portfolio-child">
+            <div class="document-subtitle">
+              {{ project.subtitle }}&nbsp;&nbsp;
+              <span>
+                {{ project.period }}
+              </span>
+            </div>
+          </div>
+
+          <div class="portfolio-child">
+            <div class="portfolio-link">
+              {% assign link = project.link %}
+              <div class="document-heading1">
+                {{ link.heading }}
+              </div>
+              {% for info in link.info %}
+                <div class="content-container">
+                  <div class="label">
+                    {{ info.label }}
+                  </div>
+                  {{ info.value }}
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+
+          <div class="portfolio-child">
+            <div class="portfolio-description">
+              {% assign description = project.description %}
+              <div class="document-heading1">
+                {{ description.heading }}
+              </div>
+              {% for info in description.info %}
+                <div class="info">
+                  {{ info }}
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+
+          <div class="portfolio-child">
+            <div class="portfolio-skill">
+              {% assign skill = project.skill %}
+              <div class="document-heading1">
+                {{ skill.heading }}
+              </div>
+              <div class="info">
+                {{ skill.info }}
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-child">
+            <div class="portfolio-achivement">
+              {% assign achivement = project.achivement %}
+              <div class="document-heading1">
+                {{ achivement.heading }}
+              </div>
+              {% assign count2 = 0 %}
+              {% for info in achivement.info %}
+                {% assign count2 = count2 | plus: 1 %}
+                <div class="document-heading2">
+                  {{ info.heading }}
+                </div>
+                <div class="document-heading3">
+                  {{ info.problem.heading }}
+                </div>
+                {% for info2 in info.problem.info %}
+                  <div class="info">
+                    - {{ info2 }}
+                  </div>
+                {% endfor %}
+                <div class="document-heading3">
+                  {{ info.solving.heading }}
+                </div>
+                {% for info2 in info.solving.info %}
+                  <div class="info">
+                    - {{ info2 }}
+                  </div>
+                {% endfor %}
+                {% if count2 < achivement.size %}
+                  <br/>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+          {% if count < portfolio.size %}
+            <br/>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="sidebar"></div>
+    </div>
   </body>
 </html>
