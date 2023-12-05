@@ -1,5 +1,15 @@
 @media print {
     @page {
-        size: A4;
+        size: auto;
+        margin: 1.5cm 2.0cm 1.5cm 2.0cm;
+    }
+
+    body {
+        width: 210mm;
+        height: 297mm;
+   }
+
+    .no-print, .no-print * {
+        display: none !important;
     }
 }

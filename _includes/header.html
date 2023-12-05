@@ -1,0 +1,24 @@
+<div class="header-container no-print">
+  <div class="header-sidebar"></div>
+  <div class="header-main">
+    {% assign paths = page.url | split: '/' %}
+    {% if paths.size == 0 or page.layout == 'home' %}
+      <div class="header-home">
+        {{ Home | capitalize }}
+      </div>
+    {% else %}
+      <div class="header-child">
+        {% for item in paths %}
+          {% if forloop.first %}
+            {% assign url = '/' | relative_url %}
+            {% if jekyll.environment == 'production' %}
+              {% assign url = '/career-archive/' | relative_url %}
+            {% endif %}
+            <a href="{{ url }}">Home</a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+  <div class="header-sidebar"></div>
+</div>

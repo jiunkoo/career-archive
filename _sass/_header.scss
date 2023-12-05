@@ -1,0 +1,34 @@
+.header-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: $smoky-white;
+}
+
+.header-sidebar {
+    background-color: $smoky-white;
+}
+
+.header-main {
+    font-family: $font-kr;
+    width: 21cm;
+}
+
+.header-home {
+    // padding: 0.8cm 0.4cm 0.8cm 0.4cm;
+    font-size: 3em;
+    font-weight: 900;
+}
+
+.header-child {
+    padding: 0.4cm;
+    border-bottom: 5px solid;
+    place-items: center;
+    background-color: white;
+    font-size: 1.4em;
+    font-weight: 700;
+
+    a {
+        color: $bold-color;
+        text-decoration: none;
+    }
+}

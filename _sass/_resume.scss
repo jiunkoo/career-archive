@@ -1,229 +1,105 @@
 @import "variables";
 
+body {
+    font-size: 0.85em;
+}
+
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
 
-    padding: 0.5cm 1cm 0.5cm 1cm;
-
+.sidebar {
     background-color: $smoky-white;
 }
 
-.child {
-    width: 100%;
-    max-width: 1000px;
+.main {
+    background-color: white;
     font-family: $font-kr;
-    background: white;
+    width: 21cm;
+    min-height: 29.7cm;
+}
+
+.child {
+    margin-bottom: 0.4cm;
+    padding: 0.4cm;
+    // break-inside: auto;
+    // border: 1px solid;
 }
 
 .resume-title {
-    table {
-        width: 100%;
-        padding: 0.8cm 0.5cm 0.8cm 0.5cm;
-
-        td {
-            font-size: 42pt;
-            font-weight: 900;
-        }
-    }
+    font-size: 3.5em;
+    font-weight: 900;
 }
 
-.resume-content {
-    table {
-        width: 100%;
-        padding: 0.5cm;
+.resume-subtitle {
+    padding-bottom: 0.2cm;
+    border-bottom: 1px solid;
+    font-size: 2em;
+    font-weight: 800;
+}
 
-        td {
-            padding-top: 0.2cm;
-            font-size: 11pt;
-        }
+.resume-heading1 {
+    padding: 0.2cm 0.0cm 0.2cm 0.4cm;
+    font-weight: 700;
+    font-size: 1.4em;
+}
 
-        tr:first-child > td {
-            padding-top: 0;
-            padding-bottom: 0.2cm;
-            border-bottom: 1px solid;
-        }
+.resume-heading2 {
+    padding: 0.2cm 0.0cm 0.2cm 0.8cm;
+    font-weight: 600;
+    font-size: 1.2em;
+}
 
-        tr:last-child > td {
-            padding-bottom: 0;
-        }
-    }
+.resume-heading3 {
+    padding: 0.2cm 0.0cm 0.2cm 1.2cm;
+    font-weight: 500;
+    font-size: 1.1em;
+}
 
-    .subtitle {
-        font-weight: 800;
-        font-size: 24pt;
-    }
+.resume-heading4 {
+    padding: 0.2cm 0.0cm 0.2cm 1.6cm;
+    font-weight: 400;
+    font-size: 1em;
+}
+
+.resume-info {
+    padding: 0.1cm 0.0cm 0.1cm 0.0cm;
+}
+
+.content-container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    padding-top: 0.2cm;
 
     .label {
+        padding-left: 0.4cm;
         font-weight: 700;
     }
 }
 
 .resume-career {
-    table {
-        width: 100%;
-        padding: 0.5cm;
-
-        td {
-            padding-top: 0.2cm;
-            font-size: 11pt;
-        }
-
-        tr:first-child > td {
-            padding-top: 0;
-            padding-bottom: 0.2cm;
-            border-bottom: 1px solid;
-        }
-
-        tr:last-child > td {
-            padding-bottom: 0;
-        }
-    }
-
-    .subtitle {
-        font-weight: 800;
-        font-size: 24pt;
-    }
-
-    .heading1 {
-        font-weight: 700;
-        font-size: 17pt;
-    }
-    
-    .heading2 {
-        font-weight: 600;
-        font-size: 15pt;
-    }
-
-    .heading3 {
-        font-weight: 500;
-        font-size: 13pt;
+    .resume-info {
+        padding-left: 2.0cm;
     }
 }
 
 .resume-other {
-    table {
-        width: 100%;
-        padding: 0.5cm;
-
-        td {
-            padding-top: 0.2cm;
-            font-size: 11pt;
-        }
-
-        tr:first-child > td {
-            padding-top: 0;
-            padding-bottom: 0.2cm;
-            border-bottom: 1px solid;
-        }
-
-        tr:last-child > td {
-            padding-bottom: 0;
-        }
+    .resume-heading2 {
+        padding-left: 0.4cm;
     }
 
-    .subtitle {
-        font-weight: 800;
-        font-size: 24pt;
-    }
-
-    .heading3 {
-        font-weight: 700;
-        font-size: 13pt;
+    .resume-info {
+        padding-left: 0.8cm;
     }
 }
 
 .resume-skill {
-    table {
-        width: 100%;
-        padding: 0.5cm;
-
-        td {
-            padding-top: 0.2cm;
-            font-size: 11pt;
-        }
-
-        tr:first-child > td {
-            padding-top: 0;
-            padding-bottom: 0.2cm;
-            border-bottom: 1px solid;
-        }
-
-        tr:last-child > td {
-            padding-bottom: 0;
-        }
+    .resume-heading2 {
+        padding-left: 0.4cm;
     }
 
-    .subtitle {
-        font-weight: 800;
-        font-size: 24pt;
-    }
-
-    .heading3 {
-        font-weight: 700;
-        font-size: 13pt;
-    }
-}
-
-.resume-credential {
-    table {
-        width: 100%;
-        padding: 0.5cm;
-
-        td {
-            padding-top: 0.2cm;
-            font-size: 11pt;
-        }
-
-        tr:first-child > td {
-            padding-top: 0;
-            padding-bottom: 0.2cm;
-            border-bottom: 1px solid;
-        }
-
-        tr:last-child > td {
-            padding-bottom: 0;
-        }
-    }
-
-    .subtitle {
-        font-weight: 800;
-        font-size: 24pt;
-    }
-
-    .period {
-        font-weight: 700;
-    }
-}
-
-.resume-education {
-    table {
-        width: 100%;
-        padding: 0.5cm;
-
-        td {
-            padding-top: 0.2cm;
-            font-size: 11pt;
-        }
-
-        tr:first-child > td {
-            padding-top: 0;
-            padding-bottom: 0.2cm;
-            border-bottom: 1px solid;
-        }
-
-        tr:last-child > td {
-            padding-bottom: 0;
-        }
-    }
-
-    .subtitle {
-        font-weight: 800;
-        font-size: 24pt;
-    }
-
-    .period {
-        font-weight: 700;
+    .resume-info {
+        padding-left: 0.8cm;
     }
 }
