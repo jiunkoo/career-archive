@@ -6,11 +6,11 @@
 <html>
   <head>
     <meta http-equiv=Content-Type content="text/html; charset=utf-8">
-    {% assign resume_url = '/assets/css/main.css' %}
+    {% assign css_url = '/assets/css/main.css' %}
     {% if jekyll.environment == 'production' %}
-      {% assign resume_url = '/career-archive/assets/css/main.css' %}
+      {% assign css_url = '/career-archive/assets/css/main.css' %}
     {% endif %}
-    <link rel="stylesheet" href="{{ resume_url }}">
+    <link rel="stylesheet" href="{{ css_url }}">
   </head>
 
   <body>
@@ -31,7 +31,15 @@
               <div class="label">
                 {{ info.label }}
               </div>
-              {{ info.value }}  
+              {% if info.value contains '@gmail.com' %}
+                <a href="mailto:{{ info.value }}">{{ info.value }}</a>
+              {% else %}
+                {% if info.value contains 'http' %}
+                  <a href="{{ info.value }}">{{ info.value }}</a>
+                {% else %}
+                  {{ info.value }}
+                {% endif %}
+              {% endif %}
             </div>
           {% endfor %}
         </div>

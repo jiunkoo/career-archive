@@ -1,22 +1,55 @@
 <div class="header-container no-print">
   <div class="header-sidebar"></div>
   <div class="header-main">
-    {% assign paths = page.url | split: '/' %}
+    {% assign paths = page.url | split: '/' | last | strip %}
     {% if paths.size == 0 or page.layout == 'home' %}
       <div class="header-home">
         {{ Home | capitalize }}
       </div>
     {% else %}
       <div class="header-child">
-        {% for item in paths %}
-          {% if forloop.first %}
+        {% assign resume_url = 'resume/' %}
+        {% assign cover-letter_url = 'cover-letter/' %}
+        {% assign portfolio_url = 'portfolio/' %}
+        {% if jekyll.environment == 'production' %}
+          {% assign resume_url = 'career-archive/resume/' %}
+          {% assign cover-letter_url = 'career-archive/cover-letter/' %}
+          {% assign portfolio_url = 'career-archive/portfolio/' %}
+        {% endif %}
+
+        {% assign resume_class = 'header-tab-link' %}
+        {% if paths == 'resume' %}
+            {% assign resume_class = 'header-tab-link' | append: ' current' %}
+        {% endif %}
+
+        {% assign cover-letter_class = 'header-tab-link' %}
+        {% if paths == 'cover-letter' %}
+            {% assign cover-letter_class = 'header-tab-link' | append: ' current' %}
+        {% endif %}
+
+        {% assign portfolio_class = 'header-tab-link' %}
+        {% if paths == 'portfolio' %}
+            {% assign portfolio_class = 'header-tab-link' | append: ' current' %}
+        {% endif %}
+
+        <ul class="header-tabs">
+          <!-- <li>
             {% assign url = '/' | relative_url %}
             {% if jekyll.environment == 'production' %}
               {% assign url = '/career-archive/' | relative_url %}
             {% endif %}
             <a href="{{ url }}">Home</a>
-          {% endif %}
-        {% endfor %}
+          </li> -->
+          <li class="{{ resume_class }}">
+            <a href="{{ site.url }}/{{ resume_url }}">resume</a>
+          </li>
+          <li class="{{ cover-letter_class }}">
+            <a href="{{ site.url }}/{{ cover-letter_url }}">cover letter</a>
+          </li>
+          <li class="{{ portfolio_class }}">
+            <a href="{{ site.url }}/{{ portfolio_url }}">portfolio</a>
+          </li>
+        </ul>
       </div>
     {% endif %}
   </div>

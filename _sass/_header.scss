@@ -20,7 +20,7 @@
 }
 
 .header-child {
-    padding: 0.6cm;
+    // padding: 0.6cm;
     // border-bottom: 5px solid;
     background-color: $linen-color;
     font-size: 1.6em;
@@ -29,5 +29,41 @@
     a {
         color: $bistre-color;
         text-decoration: none;
+    }
+}
+
+.header-tabs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+
+    li {
+        background: none;
+        display: inline-black;
+        padding: 0.4cm;
+        cursor: pointer;
+        color: #222;
+        // list-style-type: none;
+        // margin-right: 10px;
+        // font-weight: 700;
+        // font-size: 1.4em;
+    }
+
+    .current {
+        background: white;
+
+        a {
+            color: $bistre-color;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: $pale-dogwood-color;
+    }
+
+    a:hover {
+        color: $champagne-pink-color;
     }
 }

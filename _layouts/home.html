@@ -4,20 +4,24 @@ layout: default
 
 <!doctype html>
 <html>
-    <h1>Home.html</h1>
+  <head>
+    <meta http-equiv=Content-Type content="text/html; charset=utf-8">
+    {% assign css_url = '/assets/css/main.css' %}
+    {% if jekyll.environment == 'production' %}
+      {% assign css_url = '/career-archive/assets/css/main.css' %}
+    {% endif %}
+    <link rel="stylesheet" href="{{ css_url }}">
+  </head>
+
   <body>
-    <ul>
-      {% assign resume_url = 'resume/' %}
-      {% assign cover-letter_url = 'cover-letter/' %}
-      {% assign portfolio_url = 'portfolio/' %}
-      {% if jekyll.environment == 'production' %}
-        {% assign resume_url = 'career-archive/resume/' %}
-        {% assign cover-letter_url = 'career-archive/cover-letter/' %}
-        {% assign portfolio_url = 'career-archive/portfolio/' %}
-      {% endif %}
-      <li><a href="{{ site.url }}/{{ resume_url }}">resume</a></li>
-      <li><a href="{{ site.url }}/{{ cover-letter_url }}">cover letter</a></li>
-      <li><a href="{{ site.url }}/{{ portfolio_url }}">portfolio</a></li>
-    </ul>
+    <div class="container">
+      <div class="sidebar"></div>
+      <div class="main">
+        <div class="home-title">
+          Home
+        </div>
+      </div>
+      <div class="sidebar"></div>
+    </div>
   </body>
 </html>
